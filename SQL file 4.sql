@@ -22,7 +22,7 @@ select
  menu_price
  FROM tbl_menu
  ORDER BY menu_price DESC
- LIMIT 1,4; -- 1다음부터 4까지 출력됨
+ LIMIT 1,4; -- 내림차순으로 price가 1다음인 2,3,4,5 출력됨
  
  SELECT
  menu_code,
@@ -30,7 +30,7 @@ select
  menu_price
  from tbl_menu
  ORDER BY menu_price DESC
- LIMIT 5;
+ LIMIT 5; -- 콤마 없고 범위 설정 없으니까 그대로 출력됨
  
  
  

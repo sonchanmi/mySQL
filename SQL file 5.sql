@@ -8,7 +8,8 @@ menu_name as name,
 menu_price 'wwa'
 FROM tbl_menu
 ORDER BY wwa;
-
+ 
+ 
 
 SELECT
  a.category_code,
@@ -16,7 +17,7 @@ SELECT
 from tbl_menu as a
 ORDER BY
 a.category_code,
-a.menu_name;
+a.menu_name; -- 카테고리 코드를 기준으로해서 한글 정렬됨
 
 -- inner join (교집합 반환)
 SELECT 

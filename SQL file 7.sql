@@ -50,6 +50,13 @@ FROM tbl_menu
 );
 
 
+SELECT
+ 
+AVG(menu_price)
+from tbl_menu;
+
+
+
 
  
  

@@ -30,6 +30,13 @@ ORDER BY
  FROM tbl_menu
  ORDER BY multi DESC;
  
+ SELECT
+ menu_code,
+ menu_price,
+ (menu_code * menu_price)
+ FROM tbl_menu
+ ORDER BY (menu_code * menu_price) DESC;
+ 
  SELECT field('a','a','b','c');
  
  SELECT
@@ -45,3 +52,5 @@ ref_category_code
 FROM tbl_category
 ORDER BY
  ref_category_code DESC;
+
+SELECT *FROM tbl_category
