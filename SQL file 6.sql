@@ -1,5 +1,6 @@
 -- group by -- 특정 값에 따라서 그룹화 하는데 사용한다.
 
+
 SELECT
 category_code
 FROM tbl_menu
@@ -8,7 +9,7 @@ GROUP BY category_code;
 -- count ()
 SELECT 
 category_code,
-count(*) 
+count(*) -- 각 그룹이 몇개 있는지 
 FROM tbl_menu
 GROUP BY category_code;
 

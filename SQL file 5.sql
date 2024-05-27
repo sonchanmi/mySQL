@@ -14,7 +14,7 @@ ORDER BY wwa;
 SELECT
  a.category_code,
  a.menu_name
-from tbl_menu as a
+from tbl_menu as a -- 테이블 자체에도 이름을 지어 줄 수 있음
 ORDER BY
 a.category_code,
 a.menu_name; -- 카테고리 코드를 기준으로해서 한글 정렬됨
