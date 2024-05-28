@@ -86,8 +86,8 @@ SELECT * FROM user_primarykey;
 -- FOREIGN KEY로 설정되어 있는 경우 컬럼을 변경하지 못함
  
  
- DROP TABLE IF EXISTS user_gradel;
- CREATE TABLE IF NOT EXISTS user_gradel(
+ DROP TABLE IF EXISTS user_grade;
+ CREATE TABLE IF NOT EXISTS user_grade(
    grade_code INT NOT NULL UNIQUE,
    grade_name VARCHAR(255) NOT NULL
    )ENGINE=INNODB;
@@ -140,7 +140,7 @@ UPDATE user_grade
             grade_code int,
             FOREIGN KEY (grade_code)
             REFERENCES user_grade(grade_code)
-            ON UPDATE set null
+            ON UPDATE set null 
             on DELETE set null
             )ENGINE=InnoDB;
  
@@ -167,7 +167,7 @@ UPDATE user_grade
  
  DROP TABLE IF EXISTS user_check;
  CREATE TABLE if not EXISTS user_check(
- user_no int AUTO_INCREMENT PRIMARY key,
+ user_no int AUTO_INCREMENT PRIMARY key, -- AUTO_INCREMENT 자동 정렬됨 null값을 넣어주므로써 
  user_name VARCHAR(255) not null,
  gender VARCHAR(3) check(gender in('남','여')) ,
  age int CHECK (age >=19)
@@ -182,10 +182,10 @@ SELECT * FROM user_check;
 
 INSERT INTO user_check
  VALUES
- (NULL,'홍길동','남',25);
+ (NULL,'홍길동','남성',25);  -- 값 달라져서 실행 한됨 >> 남성
  INSERT into user_check
  VALUES
- (NULL, '홍길동','남',17);
+ (NULL, '홍길동','남성',17);
  
  
  -- DEFAULT
